@@ -8,7 +8,6 @@ defmodule Lats.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      LatsWeb.Telemetry,
       Lats.Repo,
       {Ecto.Migrator,
        repos: Application.fetch_env!(:lats, :ecto_repos), skip: skip_migrations?()},

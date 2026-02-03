@@ -17,12 +17,6 @@ config :lats, LatsWeb.Endpoint,
   secret_key_base: "9yWJ3qDihD1hn0k5Tq3oKKi1mbN4SKoiCW8rsIoExPE+x+IGcin+u+7htoZqrk1/",
   server: false
 
-# In test we don't send emails
-config :lats, Lats.Mailer, adapter: Swoosh.Adapters.Test
-
-# Disable swoosh api client as it is only required for production adapters
-config :swoosh, :api_client, false
-
 # Print only warnings and errors during test
 config :logger, level: :warning
 
